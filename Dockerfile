@@ -1,5 +1,4 @@
-ARG BASE_IMAGE=fluent/fluentd:v1.15.3-debian-1.2
-
+ARG BASE_IMAGE=fluent/fluentd:v1.17.1-1.0
 
 FROM $BASE_IMAGE
 
