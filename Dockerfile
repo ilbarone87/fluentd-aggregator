@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=fluent/fluentd:v1.16.6-debian-1.0
+ARG BASE_IMAGE=fluent/fluentd-aggregator:latest
 FROM $BASE_IMAGE
 
 # UPDATE BASE IMAGE WITH PLUGINS
