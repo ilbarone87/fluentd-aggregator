@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=fluent/fluentd:v1.15.3-debian-1.2
+ARG BASE_IMAGE=fluent/fluentd:vv1.17.1-debian-1.0
 FROM $BASE_IMAGE
 
 # UPDATE BASE IMAGE WITH PLUGINS
@@ -11,7 +11,6 @@ RUN buildDeps="sudo make gcc g++ libc-dev" \
  && apt-get install -y --no-install-recommends $buildDeps \
  && sudo gem install elasticsearch \
  && sudo gem install fluent-plugin-elasticsearch \
- && sudo gem install elasticsearch-xpack \
  && sudo gem install fluent-plugin-prometheus \
  && sudo gem install fluent-plugin-record-modifier \
  && sudo gem install fluent-plugin-grafana-loki \
