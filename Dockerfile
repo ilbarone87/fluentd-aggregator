@@ -9,6 +9,7 @@ USER root
 RUN buildDeps="sudo make gcc g++ libc-dev" \
  && apt-get update \
  && apt-get install -y --no-install-recommends $buildDeps \
+ && sudo gem install elasticsearch -v '9.0.0' \
  && sudo gem install fluent-plugin-elasticsearch -v '~> 6.0.0' \
  && sudo gem install fluent-plugin-prometheus -v '~> 2.2' \
  && sudo gem install fluent-plugin-record-modifier -v '~> 2.2'\
