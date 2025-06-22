@@ -9,12 +9,11 @@ USER root
 RUN buildDeps="sudo make gcc g++ libc-dev" \
  && apt-get update \
  && apt-get install -y --no-install-recommends $buildDeps \
- && sudo gem install elasticsearch -v '9.0.0' \
- && sudo gem install fluent-plugin-elasticsearch -v '~> 6.0.0' \
+ && sudo gem install elasticsearch -v '9.0.2' \
+ && sudo gem install fluent-plugin-elasticsearch -v '~> 6.0' \
  && sudo gem install fluent-plugin-prometheus -v '~> 2.2' \
  && sudo gem install fluent-plugin-record-modifier -v '~> 2.2'\
  && sudo gem install fluent-plugin-grafana-loki -v '~> 1.2'\
- && sudo gem install fluent-plugin-kubernetes_metadata_filter -v '~> 3.7' \
  && sudo gem sources --clear-all \
  && SUDO_FORCE_REMOVE=yes \
     apt-get purge -y --auto-remove \

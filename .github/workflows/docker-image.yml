@@ -33,4 +33,4 @@ jobs:
           push: true
           build-args: |
             BASE_IMAGE=fluent/fluentd:v1.18.0-debian-1.3
-          tags: ${{ github.repository }}:v1.18.0-debian-1.3
+          tags: ${{ github.repository }}:v1.18.0-debian-1.4
